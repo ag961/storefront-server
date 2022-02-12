@@ -10,7 +10,7 @@ const productModel = (sequelize, DataTypes) => sequelize.define('products', {
   category: {
     type: DataTypes.STRING
   },
-  decription: {
+  description: {
   type: DataTypes.STRING
   },
   price: {

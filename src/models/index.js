@@ -17,13 +17,14 @@ const DATABASE_CONFIG = process.env.NODE_ENV === 'production' ? {
 
 const sequelize = new Sequelize(DATABASE_URL, DATABASE_CONFIG);
 
-const Users = UserTable(sequelize, DataTypes);
-const itemSchema = ItemModel(sequelize, DataTypes);
-const itemsCollection = new Collections(itemSchema);
+const productSchema = productModel(sequelize, DataTypes);
+const categorySchema = categoryModel(sequelize, DataTypes);
+const products = new Collections(productSchema);
+const categories = new Collections(categorySchema);
 
 module.exports = {
   db: sequelize,
-  Users,
-  items: itemsCollection
+  products,
+  categories
 }
 

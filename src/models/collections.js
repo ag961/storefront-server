@@ -9,4 +9,17 @@ class Collections {
     let records = await this.model.findAll({});
     return records
   }
+
+  async create(json){
+    let createdRecord = await this.model.create(json);
+    return createdRecord;
+  }
+
+  async update(id, json){
+    let record = await this.model.findOne({where: {id}})
+    let updatedRecord = await record.update(json);
+    return updatedRecord;
+  }
 }
+
+module.exports = Collections;
