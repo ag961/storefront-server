@@ -1,7 +1,7 @@
 {
   "name": "storefront-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "storefront app server",
   "main": "index.js",
   "scripts": {
     "init": "sequelize db:create",

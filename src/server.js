@@ -39,7 +39,7 @@ app.post('/products', async (req, res) => {
 app.put('/products', async (req, res) => {
   let productId = req.body.id;
   console.log('PUT BODY', req.body);
-  let updatedProduct = await items.update(productId, req.body);
+  let updatedProduct = await products.update(productId, req.body);
   res.status(200).json(updatedProduct);
 })
 
