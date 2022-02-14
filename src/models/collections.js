@@ -6,7 +6,9 @@ class Collections {
   }
 
   async read(){
-    let records = await this.model.findAll({});
+    let records = await this.model.findAll({
+      order: [['id', 'ASC']]
+    });
     return records
   }
 
